@@ -97,6 +97,11 @@
     border-radius: 50%;
     background-color: white;
   }
+  
+  /* On mouse-over, add a grey background color */
+.filtro2:hover input ~ .checkmark {
+  background-color: #ccc;
+}
   .checkmark:after {
     content: "";
     position: absolute;
@@ -119,4 +124,12 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+  .image {
+    opacity: 1;
+    display: block;
+    backface-visibility: hidden;
+  }
+  .image:hover {
+    opacity: 0.7;
   }
