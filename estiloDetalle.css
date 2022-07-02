@@ -4,7 +4,7 @@
     position: relative;
     margin-bottom: 12px;
     cursor: pointer;
-    font-size: 18px;
+    font-size: 16px;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -51,4 +51,8 @@
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+  .filtrow .checkmark:after {
+    border-right: solid black;
+    border-bottom: solid black;
   }
