@@ -1,8 +1,8 @@
 let indice = 1
 let filtros = []
-let clic = 0
 let elements = []
 let contElement = []
+let clic = 0
 for(let i =0;i<20;i++){
     filtros.push(false)
 }
@@ -44,12 +44,10 @@ for(let i = 0;i<inventario.length;i++){
 //document.getElementById("1").style = "display:none"
 function actCheck(ind,p){
     if(document.getElementById(ind).checked ===true){
-        filtros[p]=true;
-        clic++;
+        filtros[p]=true;    
     }
     else{
         filtros[p]=false
-        clic--
     }
 }
 
@@ -59,20 +57,28 @@ function mostMarcas(mar){
         if(inventario[pos].marca===mar) contElement[i]++; 
     }
 }
-function mostTallas(dat){
+function mostTallas(datl){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
+        let aux = false;
         for(let j=0;j<inventario[pos].tallas.length;j++){
-            if(inventario[pos].tallas[j]===dat) contElement[i]++; 
+            for(let k = 0;k<datl.length;k++){
+                if(inventario[pos].tallas[j]===datl[k]) aux=true; 
+            }
         }
+        if(aux) contElement[i]++;
     }
 }
 function mostColores(dat){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
+        let aux = false;
         for(let j=0;j<inventario[pos].colores.length;j++){
-            if(inventario[pos].colores[j]===dat) contElement[i]++; 
+            for(let k=0;k<dat.length;k++){
+             if(inventario[pos].colores[j]===dat[k]) aux=true;
+            } 
         }
+        if(aux) contElement[i]++;
     }
 }
 function mostPrecio(dat1,dat2){
@@ -83,32 +89,47 @@ function mostPrecio(dat1,dat2){
     }
 }
 function filtrar(ind,p){
+    clic = 0
     actCheck(ind,p)
     contElement = []
     for(let i=0;i<elements.length;i++){
         document.getElementById((i+1).toString()).style.display="none"
         contElement.push(0)
     }
-    if(filtros[0]) mostMarcas("Bata")
-    if(filtros[1]) mostMarcas("Power")
-    if(filtros[2]) mostMarcas("North Star")
-    if(filtros[3]) mostMarcas("King Street")
-    if(filtros[4]) mostMarcas("Sparx")
-    if(filtros[5]) mostTallas(36)
-    if(filtros[6]) mostTallas(38)
-    if(filtros[7]) mostTallas(40)
-    if(filtros[8]) mostTallas(42)
-    if(filtros[9]) mostTallas(44)
-    if(filtros[10]) mostColores('rojo')
-    if(filtros[11]) mostColores('azul')
-    if(filtros[12]) mostColores('marron')
-    if(filtros[13]) mostColores('negro')
-    if(filtros[14]) mostColores('blanco')
-    if(filtros[15]) mostPrecio(50,150)
-    if(filtros[16]) mostPrecio(150,250)
-    if(filtros[17]) mostPrecio(250,350)
-    if(filtros[18]) mostPrecio(350,450)
-    if(filtros[19]) mostPrecio(450,550)
+    let cot = false;
+    if(filtros[0]) {mostMarcas("Bata");cot=true}
+    if(filtros[1]) {mostMarcas("Power");cot=true}
+    if(filtros[2]) {mostMarcas("North Star");cot=true}
+    if(filtros[3]) {mostMarcas("King Street");cot=true}
+    if(filtros[4]) {mostMarcas("Sparx");cot=true}
+    if(cot) clic++;
+    let entrada = []
+    if(filtros[5]) entrada.push(36)
+    if(filtros[6]) entrada.push(38)
+    if(filtros[7]) entrada.push(40)
+    if(filtros[8]) entrada.push(42)
+    if(filtros[9]) entrada.push(44)
+    if(entrada.length>0){
+        clic++;
+        mostTallas(entrada)
+    }
+    entrada = []
+    if(filtros[10]) entrada.push('rojo')
+    if(filtros[11]) entrada.push('azul')
+    if(filtros[12]) entrada.push('marron')
+    if(filtros[13]) entrada.push('negro')
+    if(filtros[14]) entrada.push('blanco')
+    if(entrada.length>0){
+        clic++
+        mostColores(entrada)
+    }
+    cot = false;
+    if(filtros[15]) {mostPrecio(50,150);cot=true}
+    if(filtros[16]) {mostPrecio(150,250);cot=true}
+    if(filtros[17]) {mostPrecio(250,350);cot=true}
+    if(filtros[18]) {mostPrecio(350,450);cot=true}
+    if(filtros[19]) {mostPrecio(450,550);cot=true}
+    if(cot) clic++
     for(let i=0;i<contElement.length;i++){
         if(contElement[i]===clic)
         document.getElementById((i+1).toString()).style.display="block"
