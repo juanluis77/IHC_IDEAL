@@ -2,6 +2,7 @@ let indice = 1
 let filtros = []
 let clic = 0
 let elements = []
+let contElement = []
 for(let i =0;i<20;i++){
     filtros.push(false)
 }
@@ -56,22 +57,39 @@ function mostMarcas(mar){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
         let aux = (i+1).toString()
-        if(inventario[pos].marca===mar) document.getElementById(aux).style.display="block"
+        if(inventario[pos].marca===mar) contElement[i]++; 
+        //document.getElementById(aux).style.display="block"
+    }
+}
+function mostTallas(dat){
+    for(let i=0;i<elements.length;i++){
+        let pos = elements[i]
+        let aux = (i+1).toString()
+        for(let j=0;j<inventario[pos].tallas.length;j++){
+            if(inventario[pos].tallas[j]===dat) contElement[i]++; 
+            //document.getElementById(aux).style.display="block"
+        }
     }
 }
 function filtrar(ind,p){
     actCheck(ind,p)
+    contElement = []
     for(let i=0;i<elements.length;i++){
         document.getElementById((i+1).toString()).style.display="none"
+        contElement.push(0)
     }
     if(filtros[0]) mostMarcas("Bata")
     if(filtros[1]) mostMarcas("Power")
     if(filtros[2]) mostMarcas("North Star")
     if(filtros[3]) mostMarcas("King Street")
     if(filtros[4]) mostMarcas("Sparx")
-    if(clic===0){
-        for(let i=0;i<elements.length;i++){
-            document.getElementById((i+1).toString()).style.display="block"
-        }    
+    if(filtros[5]) mostTallas(36)
+    if(filtros[6]) mostTallas(38)
+    if(filtros[7]) mostTallas(40)
+    if(filtros[8]) mostTallas(42)
+    if(filtros[9]) mostTallas(44)
+    for(let i=0;i<contElement.length;i++){
+        if(contElement[i]===clic)
+        document.getElementById((i+1).toString()).style.display="block"
     }
 }
