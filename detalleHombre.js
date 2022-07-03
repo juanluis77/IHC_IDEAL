@@ -56,29 +56,30 @@ function actCheck(ind,p){
 function mostMarcas(mar){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
-        let aux = (i+1).toString()
         if(inventario[pos].marca===mar) contElement[i]++; 
-        //document.getElementById(aux).style.display="block"
     }
 }
 function mostTallas(dat){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
-        let aux = (i+1).toString()
         for(let j=0;j<inventario[pos].tallas.length;j++){
             if(inventario[pos].tallas[j]===dat) contElement[i]++; 
-            //document.getElementById(aux).style.display="block"
         }
     }
 }
 function mostColores(dat){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
-        let aux = (i+1).toString()
         for(let j=0;j<inventario[pos].colores.length;j++){
             if(inventario[pos].colores[j]===dat) contElement[i]++; 
-            //document.getElementById(aux).style.display="block"
         }
+    }
+}
+function mostPrecio(dat1,dat2){
+    for(let i=0;i<elements.length;i++){
+        let pos = elements[i]
+        let aux = inventario[pos].precio
+        if(aux>=dat1 && aux<=dat2) contElement[i]++; 
     }
 }
 function filtrar(ind,p){
@@ -103,6 +104,11 @@ function filtrar(ind,p){
     if(filtros[12]) mostColores('marron')
     if(filtros[13]) mostColores('negro')
     if(filtros[14]) mostColores('blanco')
+    if(filtros[15]) mostPrecio(50,150)
+    if(filtros[16]) mostPrecio(150,250)
+    if(filtros[17]) mostPrecio(250,350)
+    if(filtros[18]) mostPrecio(350,450)
+    if(filtros[19]) mostPrecio(450,550)
     for(let i=0;i<contElement.length;i++){
         if(contElement[i]===clic)
         document.getElementById((i+1).toString()).style.display="block"
