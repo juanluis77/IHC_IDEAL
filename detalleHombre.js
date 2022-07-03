@@ -71,6 +71,16 @@ function mostTallas(dat){
         }
     }
 }
+function mostColores(dat){
+    for(let i=0;i<elements.length;i++){
+        let pos = elements[i]
+        let aux = (i+1).toString()
+        for(let j=0;j<inventario[pos].colores.length;j++){
+            if(inventario[pos].colores[j]===dat) contElement[i]++; 
+            //document.getElementById(aux).style.display="block"
+        }
+    }
+}
 function filtrar(ind,p){
     actCheck(ind,p)
     contElement = []
@@ -88,6 +98,11 @@ function filtrar(ind,p){
     if(filtros[7]) mostTallas(40)
     if(filtros[8]) mostTallas(42)
     if(filtros[9]) mostTallas(44)
+    if(filtros[10]) mostColores('rojo')
+    if(filtros[11]) mostColores('azul')
+    if(filtros[12]) mostColores('marron')
+    if(filtros[13]) mostColores('negro')
+    if(filtros[14]) mostColores('blanco')
     for(let i=0;i<contElement.length;i++){
         if(contElement[i]===clic)
         document.getElementById((i+1).toString()).style.display="block"
