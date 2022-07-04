@@ -34,6 +34,7 @@ if(item!=null){
         if(ob.colores[i]==='marron') cir.style="background-color: brown; display: inline-block;height: 25px;width: 25px;border-radius: 50%;vertical-align: sub;"
         if(ob.colores[i]==='negro') cir.style="background-color: black; display: inline-block;height: 25px;width: 25px;border-radius: 50%;vertical-align: sub;"
         if(ob.colores[i]==='blanco') cir.style="background-color: white; display: inline-block;height: 25px;width: 25px;border-radius: 50%;vertical-align: sub;border-style: solid;"
+        if(ob.colores[i]==='rosado') cir.style="background-color: pink; display: inline-block;height: 25px;width: 25px;border-radius: 50%;vertical-align: sub;"
         dcir.innerText = "  "+ob.colores[i] 
         oby.appendChild(cir)
         oby.appendChild(dcir)
