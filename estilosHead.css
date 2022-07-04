@@ -1,0 +1,52 @@
+.barra li ul{
+    margin: 0px;
+    padding: 0px;
+}
+.head{
+    margin: auto;
+    padding: 10px;
+    width: 95%;
+    background-color: red;
+}
+.barra{
+    margin: auto;
+    padding: 0px;
+    width: 40%;
+}
+ul, ol{
+    list-style: none;
+}
+.barra > li{
+    float: left;
+    
+}
+.barra li a{
+    background-color: red;
+    color: white;
+    font-size: larger;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 12px;
+    display: block;
+}
+.barra li ul li a:hover{
+    background-color: rgb(255, 89, 89);
+}
+.barra > li > a:hover{
+    text-decoration: underline;
+}
+.barra li ul {
+    display:block;
+    position:absolute;
+}
+.barra li:hover > ul {
+    display:block;
+}
+.barra li ul li {
+    position:relative;
+}
+
+.barra li ul li ul {
+    right:-100px;
+    top:0px;
+}
