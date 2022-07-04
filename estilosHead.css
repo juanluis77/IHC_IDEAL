@@ -57,3 +57,12 @@ ul, ol{
 .kol:hover{
     z-index: 0;
 }
+.buscador{
+    float:right
+}
+.buscador button{
+    border: none;
+}
+.buscador button:hover {
+    background: #ccc;
+}
