@@ -1,20 +1,20 @@
 const inventario = []
-inventario.push({id: 1,nombre: 'Medias North Star',categoria:'accesorios',genero:'',
-    subcategoria:'Media',precio: 39,marca: 'North Star',stock: 6,tallas: [],colores:[]
+inventario.push({id: 1,nombre: 'Medias North Star',categoria:'accesorio',genero:'',
+    subcategoria:'Media',precio: 39,marca: 'North Star',stock: 6,tallas: [],colores:['negro']
 })
-inventario.push({id: 2,nombre: 'Medias Bata',categoria:'accesorios',genero:'',
-    subcategoria:'Media',precio: 29,marca: 'Bata',stock: 6,tallas: [],colores:[]
+inventario.push({id: 2,nombre: 'Medias Bata',categoria:'accesorio',genero:'',
+    subcategoria:'Media',precio: 29,marca: 'Bata',stock: 6,tallas: [],colores:['negro']
 })
-inventario.push({id: 3,nombre: 'Cartera Prive',categoria:'accesorios',genero:'Mujer',
-    subcategoria:'Cartera',precio: 199,marca: 'Prive',stock: 3,tallas: [],colores:[]
+inventario.push({id: 3,nombre: 'Cartera Prive',categoria:'accesorio',genero:'Mujer',
+    subcategoria:'Cartera',precio: 199,marca: 'Prive',stock: 3,tallas: [],colores:['marron']
 })
-inventario.push({id: 4,nombre: 'Mochila North Star',categoria:'accesorios',genero:'',
-    subcategoria:'Mochila',precio: 199,marca: 'North Star',stock: 2,tallas: [],colores:[]
+inventario.push({id: 4,nombre: 'Mochila North Star',categoria:'accesorio',genero:'',
+    subcategoria:'Mochila',precio: 199,marca: 'North Star',stock: 2,tallas: [],colores:['negro']
 })
-inventario.push({id: 5,nombre: 'Limpiador Suave Bata',categoria:'accesorios',genero:'',
+inventario.push({id: 5,nombre: 'Limpiador Suave Bata',categoria:'accesorio',genero:'',
     subcategoria:'Limpiador',precio: 29,marca: 'Bata',stock: 6,tallas: [],colores:[]
 })
-inventario.push({id: 6,nombre: 'Plantillas Bata',categoria:'accesorios',genero:'',
+inventario.push({id: 6,nombre: 'Plantillas Bata',categoria:'accesorio',genero:'',
     subcategoria:'Plantilla',precio: 19,marca: 'Bata',stock: 3,tallas: [],colores:[]
 })
 inventario.push({id: 7,nombre: 'Sneakers Light Style',categoria:'Sneakers',genero:'Hombre',

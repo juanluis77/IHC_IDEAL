@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manaco</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilosHead.css">
+        <link rel="stylesheet" href="estiloDetalle.css">
+    </head>
+    <body style="padding: 10px 10px 10px 10px;background-color: #eaf6ea">
+        <header>
+            <div>
+                <img src = "imagenes/logo.png" width="180" alt="logo">
+            <div>
+            <br>
+            <br>
+            <div class="head">    
+                <ul class="barra" style="overflow: hidden;">
+                    <li><a href="#">Marca</a>
+                        <ul>
+                            <li><a href="MarcasBata.html">Bata</a></li>
+                            <li><a href="MarcasNS.html">North Star</a></li>
+                            <li><a href="MarcasPower.html">Power</a></li>
+                            <li><a href="#">King Street</a></li>
+                            <li><a href="#">Marie Claire</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Hombre.html">Hombre</a>
+                        <ul>
+                            <li><a href="HombreSneakers.html">Sneakers</a></li>
+                            <li><a href="HombreBotas.html">Botas</a></li>
+                            <li><a href="HombreDeportivo.html">Deportivos</a></li>
+                            <li><a href="#">Confort</a></li>
+                            <li><a href="HombreFormal.html">Formal</a>
+                                <ul>
+                                    <li><a href="HombreFormalCordones.html">Cordones</a>
+                                    <li><a href="#">Mocasin</a>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sandalia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Mujer.html">Mujer</a>
+                        <ul>
+                            <li><a href="MujerSneakers.html">Sneakers</a></li>
+                            <li><a href="MujerBotas.html">Botas</a>
+                                <ul>
+                                    <li><a href="MujerBotasAltas.html">Botas altas</a></li>
+                                    <li><a href="#">Botines</a></li>    
+                                </ul>
+                            </li>
+                            <li><a href="MujerDeportivo.html">Deportivo</a></li>
+                            <li><a href="#">Confort</a></li>
+                            <li><a href="MujerFormal.html">Formal</a></li>
+                            <li><a href="#">Sandalias</a></li>
+                            <li><a href="#">Plataforma</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Infantil</a></li>
+                    <li><a href="#">Accesorios</a>
+                        <ul>
+                            <li><a href="#">Medias</a></li>
+                        <li><a href="#">Carteras</a></li>
+                        <li><a href="#">Limpiadores</a></li>
+                        <li><a href="#">Plantillas</a></li>
+                        <li><a href="#">Mochilas</a></li>   
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <br>
+        <div class="container" style="background-color: rgb(206, 194, 194);padding: 10px 20px 0px 20px;margin: auto;width: 95%;">
+            <p>
+                <a href="javascript:history.back()">
+                    <img src="imagenes/back.png" style="width: 25px;height: 25px;">
+                </a>
+                <a href="Accesorios.html"><b style="font-size: 20px;color: black;"><u>Accesorios</u></b></a>
+            </p>
+        </div>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3" >
+                    <div style="background-color: rgb(206, 194, 194);margin: auto;padding-top: 10px">
+                        <div class="titfil text-center">
+                            <p><b>Precio</b></p>
+                        </div>
+                        <div style="width: 50%;margin:auto">
+                            <label class="filtro2"> Hombre
+                                <input id="marca1" onclick="filtrar('marca1',0)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> Mujer
+                                <input id="marca2" onclick="filtrar('marca2',1)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="titfil text-center">
+                            <p><b>Marcas</b></p>
+                        </div>
+                        <div style="width: 50%;margin:auto">
+                            <label class="filtro2">Bata
+                                <input id="marca3" type="checkbox" name="radio" onclick="filtrar('marca3',2)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> North Star
+                                <input id="marca4" type="checkbox" name="radio" onclick="filtrar('marca4',3)">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> Prive 
+                                <input id="marca5" type="checkbox" name="radio" onclick="filtrar('marca5',4)">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <div class="titfil text-center">
+                            <p><b>Precio</b></p>
+                        </div>
+                        <div style="width: 50%;margin:auto">
+                            <label class="filtro2"> 1 - 50 bs
+                                <input id="marca6" onclick="filtrar('marca6',5)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> 50 - 100 bs
+                                <input id="marca7" onclick="filtrar('marca7',6)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> 100 - 150 bs
+                                <input id="marca8" onclick="filtrar('marca8',7)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> 150 - 200 bs
+                                <input id="marca9" onclick="filtrar('marca9',8)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="filtro2"> 200 - 250 bs 
+                                <input id="marca10" onclick="filtrar('marca10',9)" type="checkbox" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+                <div id="contenido" class="col-lg-9 row kol">
+                </div>
+            </div>
+            
+        </div>
+    
+    </body>
+    <script src="stock.js"></script>
+    <script>
+        function condicionPage(i){
+            return inventario[i].categoria === "accesorio"
+        }
+    </script>
+    <script src="detalleAccesorio.js"></script>
+    
+</html>
