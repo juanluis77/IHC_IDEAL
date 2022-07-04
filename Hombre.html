@@ -18,25 +18,56 @@
             <br>
             <div class="head">    
                 <ul class="barra" style="overflow: hidden;">
-                    <li><a href="#">Marca</a></li>
-                    <li><a href="#">Accesorios</a></li>
+                    <li><a href="#">Marca</a>
+                        <ul>
+                            <li><a href="MarcasBata.html">Bata</a></li>
+                            <li><a href="MarcasNS.html">North Star</a></li>
+                            <li><a href="MarcasPower.html">Power</a></li>
+                            <li><a href="#">King Street</a></li>
+                            <li><a href="#">Marie Claire</a></li>
+                        </ul>
+                    </li>
                     <li><a href="Hombre.html">Hombre</a>
                         <ul>
                             <li><a href="HombreSneakers.html">Sneakers</a></li>
                             <li><a href="HombreBotas.html">Botas</a></li>
                             <li><a href="HombreDeportivo.html">Deportivos</a></li>
-                            <li><a href="HombreConfort.html">Confort</a></li>
+                            <li><a href="#">Confort</a></li>
                             <li><a href="HombreFormal.html">Formal</a>
                                 <ul>
                                     <li><a href="HombreFormalCordones.html">Cordones</a>
-                                    <li><a href="HombreFormalMocasin.html">Mocasin</a>
+                                    <li><a href="#">Mocasin</a>
                                 </ul>
                             </li>
-                            <li><a href="HombreSandalia.html">Sandalia</a></li>
+                            <li><a href="#">Sandalia</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Mujer</a></li>
+                    <li><a href="Mujer.html">Mujer</a>
+                        <ul>
+                            <li><a href="MujerSneakers.html">Sneakers</a></li>
+                            <li><a href="MujerBotas.html">Botas</a>
+                                <ul>
+                                    <li><a href="MujerBotasAltas.html">Botas altas</a></li>
+                                    <li><a href="#">Botines</a></li>    
+                                </ul>
+                            </li>
+                            <li><a href="MujerDeportivo.html">Deportivo</a></li>
+                            <li><a href="#">Confort</a></li>
+                            <li><a href="MujerFormal.html">Formal</a></li>
+                            <li><a href="#">Sandalias</a></li>
+                            <li><a href="#">Plataforma</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Infantil</a></li>
+                    <li><a href="#">Accesorios</a>
+                        <ul>
+                            <li><a href="#">Medias</a></li>
+                        <li><a href="#">Carteras</a></li>
+                        <li><a href="#">Limpiadores</a></li>
+                        <li><a href="#">Plantillas</a></li>
+                        <li><a href="#">Mochilas</a></li>   
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </header>
@@ -46,7 +77,7 @@
                 <a href="javascript:history.back()">
                     <img src="imagenes/back.png" style="width: 25px;height: 25px;">
                 </a>
-                <a href="paginaHombre.html"><b style="font-size: 20px;color: black;"><u>Hombre</u></b></p></a>
+                <a href="Hombre.html"><b style="font-size: 20px;color: black;"><u>Hombre</u></b></p></a>
         </div>
         <br>
         <div class="container">
@@ -169,6 +200,6 @@
             return inventario[i].genero === "Hombre"
         }
     </script>
-    <script src="detalleGenero.js"></script>
+    <script src="detalleHombre.js"></script>
     
 </html>
