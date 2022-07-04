@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Manaco</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="estilosHead.css">
+        <link rel="stylesheet" href="estiloDetalle.css">
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+    <body style="padding: 10px 10px 10px 10px;background-color: #eaf6ea">
+        <header>
+            <div>
+                <img src = "imagenes/logo.png" width="180" alt="logo">
+            <div>
+            <br>
+            <br>
+            <div class="head">    
+                <ul class="barra" style="overflow: hidden;">
+                    <li><a href="Marcas.html">Marcas</a>
+                        <ul>
+                            <li><a href="MarcasBata.html">Bata</a></li>
+                            <li><a href="MarcasNS.html">North Star</a></li>
+                            <li><a href="MarcasPower.html">Power</a></li>
+                            <li><a href="#">King Street</a></li>
+                            <li><a href="#">Marie Claire</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Hombre.html">Hombre</a>
+                        <ul>
+                            <li><a href="HombreSneakers.html">Sneakers</a></li>
+                            <li><a href="HombreBotas.html">Botas</a></li>
+                            <li><a href="HombreDeportivo.html">Deportivos</a></li>
+                            <li><a href="#">Confort</a></li>
+                            <li><a href="HombreFormal.html">Formal</a>
+                                <ul>
+                                    <li><a href="HombreFormalCordones.html">Cordones</a>
+                                    <li><a href="#">Mocasin</a>
+                                </ul>
+                            </li>
+                            <li><a href="#">Sandalia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="Mujer.html">Mujer</a>
+                        <ul>
+                            <li><a href="MujerSneakers.html">Sneakers</a></li>
+                            <li><a href="MujerBotas.html">Botas</a>
+                                <ul>
+                                    <li><a href="MujerBotasAltas.html">Botas altas</a></li>
+                                    <li><a href="#">Botines</a></li>    
+                                </ul>
+                            </li>
+                            <li><a href="MujerDeportivo.html">Deportivo</a></li>
+                            <li><a href="#">Confort</a></li>
+                            <li><a href="MujerFormal.html">Formal</a></li>
+                            <li><a href="#">Sandalias</a></li>
+                            <li><a href="#">Plataforma</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Infantil</a></li>
+                    <li><a href="Accesorios.html">Accesorios</a>
+                        <ul>
+                            <li><a href="#">Medias</a></li>
+                        <li><a href="#">Carteras</a></li>
+                        <li><a href="#">Limpiadores</a></li>
+                        <li><a href="#">Plantillas</a></li>
+                        <li><a href="#">Mochilas</a></li>   
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <br>
+        <div class="container" style="background-color: rgb(206, 194, 194);padding: 10px 20px 10px 20px;margin: auto;width: 95%;">
+            <div>
+                <a href="javascript:history.back()">
+                    <img src="imagenes/back.png" style="width: 25px;height: 25px;">
+                </a>
+                <a href="admin.html"><b style="font-size: 20px;color: black;"><u>Subir Producto</u></b></a>        
+            </div>
+        </div>
+        <br>
+        <div class="container">
+            <div class="text-center secAdmin titsec">
+                <b style="font-size: 24px;">Atributos visuales</b>
+            </div>
+            <div class="secAdmin text-center">
+                <form style="padding-top: 10px;">
+                    <label for="myfile" style="font-size: 18px;">Seleccione imagen principal</label>
+                    <input type="file" id="myfile" name="myfile" style="margin: auto;padding: 0px;"><br>
+                    <input type="submit">
+                </form>
+            </div>
+            <div class="secAdmin text-center">
+                <form style="padding-top: 10px;">
+                    <label for="myfile" style="font-size: 18px;">Seleccione imagenes secundarias</label>
+                    <input type="file" id="myfile" name="myfile" style="margin: auto;padding: 0px;"><br>
+                    <input type="submit" value="Agregar">
+                </form>
+            </div>
+            <br>
+            <div class="text-center secAdmin titsec">
+                <b style="font-size: 24px;">Atributos del producto</b>
+            </div>
+            <div class="secAdmin text-center">
+                <div style="padding-top: 10px;">
+                    <label for="fname">Nombre del producto </label>
+                    <input type="text" id="fname" name="fname"><br><br>
+                    <label for="col">Agregar Colores</label>
+                    <select name="col" id="col">
+                        <option value="rojo">Rojo</option>
+                        <option value="azul">Azul</option>
+                        <option value="marron">Marron</option>
+                        <option value="rosado">Rosado</option>
+                        <option value="negro">Negro</option>
+                        <option value="blanco">Blanco</option>
+                    </select><br><br>
+                    <input type="submit" value="Agregar" onclick="addColores()">
+                    <br><br>
+                    <p id="colores" style="background-color: white;font-size:18px"></p><br><br>
+                    <label for="tal">Agregar Tallas</label>
+                    <select name="tal" id="tal">
+                        <option value="36">36</option>
+                        <option value="38">38</option>
+                        <option value="40">40</option>
+                        <option value="42">42</option>
+                        <option value="44">44</option>
+                    </select><br><br>
+                    <input type="submit" value="Agregar" onclick="addTallas()">
+                    <br><br>
+                    <p id="tallas" style="background-color: white;font-size:18px"></p><br><br>
+                    <label for="marca">Marca </label>
+                    <input type="text" id="marca" name="marca"><br><br>
+                    <label for="precio">Precio (Bs.) </label>
+                    <input type="text" id="precio" name="precio"><br><br>
+                    <label for="gen">Genero</label>
+                    <select name="gen" id="gen">
+                        <option value=""></option>
+                        <option value="Hombre">Hombre</option>
+                        <option value="Mujer">Mujer</option>
+                    </select><br><br>
+                    <label for="lname">Detalles del producto</label>
+                    <input type="text" id="lname" name="lname"><br><br>
+                    <input type="submit" value="AGREGAR A CATALOGO" onclick="document.location.reload(true)">
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+    </body>
+    <script src="admin.js"></script>
+    
+</html>
