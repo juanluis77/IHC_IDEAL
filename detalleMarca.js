@@ -3,7 +3,7 @@ let filtros = []
 let elements = []
 let contElement = []
 let clic = 0
-for(let i =0;i<10;i++){
+for(let i =0;i<17;i++){
     filtros.push(false)
 }
 function agregarItem(dir,ind){
@@ -56,10 +56,28 @@ function mostGenero(mar){
         if(inventario[pos].genero===mar) contElement[i]++; 
     }
 }
-function mostMarcas(mar){
+function mostTallas(datl){
     for(let i=0;i<elements.length;i++){
         let pos = elements[i]
-        if(inventario[pos].marca===mar) contElement[i]++; 
+        let aux = false;
+        for(let j=0;j<inventario[pos].tallas.length;j++){
+            for(let k = 0;k<datl.length;k++){
+                if(inventario[pos].tallas[j]===datl[k]) aux=true; 
+            }
+        }
+        if(aux) contElement[i]++;
+    }
+}
+function mostColores(dat){
+    for(let i=0;i<elements.length;i++){
+        let pos = elements[i]
+        let aux = false;
+        for(let j=0;j<inventario[pos].colores.length;j++){
+            for(let k=0;k<dat.length;k++){
+             if(inventario[pos].colores[j]===dat[k]) aux=true;
+            } 
+        }
+        if(aux) contElement[i]++;
     }
 }
 function mostPrecio(dat1,dat2){
@@ -82,16 +100,33 @@ function filtrar(ind,p){
     if(filtros[1]) {mostGenero("Mujer");cot=true}
     if(cot) clic++;
     cot = false;
-    if(filtros[2]) {mostMarcas("Bata");cot=true}
-    if(filtros[3]) {mostMarcas("North Star");cot=true}
-    if(filtros[4]) {mostMarcas("Prive");cot=true}
-    if(cot) clic++;
+    let entrada = []
+    if(filtros[2]) entrada.push(36)
+    if(filtros[3]) entrada.push(38)
+    if(filtros[4]) entrada.push(40)
+    if(filtros[5]) entrada.push(42)
+    if(filtros[6]) entrada.push(44)
+    if(entrada.length>0){
+        clic++;
+        mostTallas(entrada)
+    }
+    entrada = []
+    if(filtros[7]) entrada.push('rojo')
+    if(filtros[8]) entrada.push('azul')
+    if(filtros[9]) entrada.push('marron')
+    if(filtros[10]) entrada.push('negro')
+    if(filtros[11]) entrada.push('blanco')
+    if(filtros[12]) entrada.push('rosado')
+    if(entrada.length>0){
+        clic++
+        mostColores(entrada)
+    }
     cot = false;
-    if(filtros[5]) {mostPrecio(1,50);cot=true}
-    if(filtros[6]) {mostPrecio(50,100);cot=true}
-    if(filtros[7]) {mostPrecio(100,150);cot=true}
-    if(filtros[8]) {mostPrecio(150,200);cot=true}
-    if(filtros[9]) {mostPrecio(200,250);cot=true}
+    if(filtros[13]) {mostPrecio(50,150);cot=true}
+    if(filtros[14]) {mostPrecio(150,250);cot=true}
+    if(filtros[15]) {mostPrecio(250,350);cot=true}
+    if(filtros[16]) {mostPrecio(350,450);cot=true}
+    if(filtros[17]) {mostPrecio(450,550);cot=true}
     if(cot) clic++
     for(let i=0;i<contElement.length;i++){
         if(contElement[i]===clic)
