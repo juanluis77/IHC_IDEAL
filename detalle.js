@@ -38,7 +38,31 @@ if(item!=null){
         oby.appendChild(cir)
         oby.appendChild(dcir)
         aux.appendChild(oby.cloneNode(true))
-        
+    }
+    let rel= document.getElementById('rela')
+    let div1 = document.createElement('div')
+    div1.className="col-lg-3 text-center"
+    div1.style = "padding-top: 10px;padding-bottom: 30px;display:block"
+    let aa = document.createElement('a')
+    aa.href = "#"
+    let ima = document.createElement('img')
+    ima.src = "stock/"+ob.id.toString()+".jpg"
+    ima.className = 'image'
+    ima.style = "width: 200px; height: 200px"
+    aa.appendChild(ima)
+    div1.appendChild(aa)
+    div1.appendChild(document.createElement('br'))
+    let b = document.createElement('b')
+    b.style = 'font-size: 22px;'
+    b.innerText = ob.marca
+    div1.appendChild(b)
+    let b2 = document.createElement('b')
+    b2.style = 'font-size: 28px;'
+    b2.innerText = "Bs. "+ob.precio
+    div1.appendChild(document.createElement('br'))
+    div1.appendChild(b2)
+    for(let i=0;i<4;i++){
+        rel.appendChild(div1.cloneNode(true))
     }
 
 
