@@ -36,8 +36,9 @@ ul, ol{
     text-decoration: underline;
 }
 .barra li ul {
-    display:block;
+    display:none;
     position:absolute;
+    z-index: 1;
 }
 .barra li:hover > ul {
     display:block;
@@ -49,4 +50,10 @@ ul, ol{
 .barra li ul li ul {
     right:-100px;
     top:0px;
+}
+.kol{
+    z-index: 0;
+}
+.kol:hover{
+    z-index: -1;
 }
