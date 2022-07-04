@@ -30,9 +30,7 @@
                 <a href="javascript:history.back()">
                     <img src="imagenes/back.png" style="width: 25px;height: 25px;">
                 </a>
-                <a href="paginaHombre.html"><b style="font-size: 20px;color: black;"><u>Hombre</u></b></a>
-                <b style="font-size: 20px;">/</b>
-                <a href="paginaHombreSneakers.html"><b style="font-size: 20px;color: black;"><u>Sneakers</u></b></a></p>
+                <a href="paginaHombre.html"><b style="font-size: 20px;color: black;"><u>Hombre</u></b></p></a>
         </div>
         <br>
         <div class="container">
@@ -150,6 +148,11 @@
     
     </body>
     <script src="stock.js"></script>
-    <script src="detalleHombreSneakers.js"></script>
+    <script>
+        function condicionPage(i){
+            return inventario[i].genero === "Hombre" && inventario[i].categoria === "Formal" && inventario[i].subcategoria === "Mocasin"
+        }
+    </script>
+    <script src="detalleGenero.js"></script>
     
 </html>

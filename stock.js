@@ -35,10 +35,10 @@ inventario.push({id: 11,nombre: 'Deportivos Red NS',categoria:'Deportivo',genero
 inventario.push({id: 12,nombre: 'Deportivo high',categoria:'Deportivo',genero:'Mujer',
     subcategoria:'',precio: 299,marca: 'Power',stock: 9,tallas: [36,42,44],colores:[]
 })
-inventario.push({id: 13,nombre: 'Comfit Bata',categoria:'Deportivo',genero:'Hombre',
+inventario.push({id: 13,nombre: 'Comfit Bata',categoria:'Confort',genero:'Hombre',
     subcategoria:'',precio: 239,marca: 'Bata',stock: 8,tallas: [36,40,44],colores:['marron']
 })
-inventario.push({id: 14,nombre: 'Comfit Bata F',categoria:'Deportivo',genero:'Mujer',
+inventario.push({id: 14,nombre: 'Comfit Bata F',categoria:'Confort',genero:'Mujer',
     subcategoria:'',precio: 209,marca: 'Bata',stock: 7,tallas: [36,40,44],colores:[]
 })
 inventario.push({id: 15,nombre: 'Zapatilla S',categoria:'Formal',genero:'Hombre',

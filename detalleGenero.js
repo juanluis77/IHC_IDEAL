@@ -11,7 +11,7 @@ function agregarItem(dir,ind){
     div1.className="col-lg-3 text-center"
     div1.style = "padding-top: 10px;padding-bottom: 30px;display:block"
     let aa = document.createElement('a')
-    aa.href = "#"
+    aa.href = "detalle.html"
     let ima = document.createElement('img')
     ima.src = dir
     ima.className = 'image'
@@ -36,7 +36,7 @@ function agregarItem(dir,ind){
     }
 }
 for(let i = 0;i<inventario.length;i++){
-    if(inventario[i].genero === "Hombre" && inventario[i].categoria ==='Sneakers'){
+    if(condicionPage(i)){
         let dirs = (i+1).toString()
         agregarItem("stock/"+dirs+".jpg",i)
     }
@@ -134,4 +134,9 @@ function filtrar(ind,p){
         if(contElement[i]===clic)
         document.getElementById((i+1).toString()).style.display="block"
     }
+}
+for(let i=0;i<elements.length;i++){
+    document.getElementById((i+1).toString()).addEventListener('click',function(){
+        localStorage.setItem('item',elements[i].toString())
+    })
 }

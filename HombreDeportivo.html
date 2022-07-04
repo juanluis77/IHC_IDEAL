@@ -148,6 +148,11 @@
     
     </body>
     <script src="stock.js"></script>
-    <script src="detalleHombre.js"></script>
+    <script>
+        function condicionPage(i){
+            return inventario[i].genero === "Hombre" && inventario[i].categoria === "Deportivo" 
+        }
+    </script>
+    <script src="detalleGenero.js"></script>
     
 </html>
